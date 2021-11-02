@@ -31,3 +31,7 @@ def get_m_interval(values):
     right = exp + z * disp / n ** 0.5
 
     return left, right
+
+
+def get_xi_2(matrix, result, n):
+    return sum(((matrix[i][j] - (result[i][j] / n)) ** 2) / (result[i][j] / n) for i in range(len(matrix)) for j in range(len(matrix[0])))
